@@ -1,0 +1,69 @@
+<%-
+  include('../common/_head', {
+    page: json['work']
+  });
+%>
+
+<div id="container">
+  <div id="main">
+    <div class="main-inner">
+      <article class="l-content l-in-shadow">
+        <h2 class="single-ttl main-font">CONTACT</h2>
+
+        <div id="contact" class="l-contact">
+          <div class="form__block">
+            <div class="form__block_text">
+              <p>制作の依頼・ご相談などお気軽にお問い合わせくださいませ。</p>
+              <p>下記フォームよりわかる範囲でご記入ください。必須の項目は必ずご記入お願いします。</p>
+            </div>
+            <form method="post" action="mail.php">
+              <table class="table-default">
+                <!-- お名前 -->
+                <tr>
+                  <th>お名前<span class="form-require">※</span></th>
+                  <td>
+                    <div class="name-box">
+                      <input type="text" name="お名前" placeholder="例：狭山太郎" required/>
+                    </div>
+                  </td>
+                </tr>
+                <!-- フリガナ -->
+                <tr>
+                  <th>フリガナ<span class="form-require">※</span></th>
+                  <td>
+                    <div class="name-box">
+                      <input type="text" name="フリガナ" placeholder="例：サヤマ　タロウ" required/>
+                    </div>
+                  </td>
+                </tr>
+                <!-- メールアドレス -->
+                <tr>
+                  <th>メールアドレス<span class="form-require">※</span></th>
+                  <td>
+                    <div class="email-box input-box">
+                      <input type="text" name="メールアドレス" placeholder="例：abc@abc.co.jp" required>
+                    </div>
+                  </td>
+                </tr>
+                <!-- お問合せ内容 -->
+                <tr>
+                  <th>お問い合せ内容<span class="form-require">※</span></th>
+                  <td><textarea  name="お問合せ内容" cols="50" rows="5" required></textarea></td>
+                </tr>
+              </table>
+              <!-- 確認ボタン -->
+              <div class="submit">
+                <input class="button" type="submit" value="内容確認画面へ"/>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+<!-- ここまでコンテンツ -->
+
+
+<% include ../common/_footer %>

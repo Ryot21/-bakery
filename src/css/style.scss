@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+
+/*
+Theme Name: Retail Guide
+Author: Retail Guide
+Version: 2020.8.7 ver2
+*/
+
+/* normalize, 変数(for Sass) */
+@import 'variables/**';
+
+/* mixin(for Sass) */
+@import 'mixins/**';
+
+/* ベースの要素スタイル */
+@import 'basis/**';
+
+/* ライブラリ */
+@import 'library/**';
+
+
+/* コンポーネント */
+@import 'component/**';
+
+/* 共通レイアウト(header, footer, etc.) */
+@import 'layout/**';
+
+/* ページごとのスタイル */
+@import 'page/**';
+
+/* ユーティリティ(color, size, spacing, etc.) */
+@import 'utility/**';

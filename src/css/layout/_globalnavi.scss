@@ -1,0 +1,149 @@
+
+/*=========================
+global-navigation active
+==========================*/
+
+#container {
+  position: relative;
+  // height: 100vh;
+  z-index: 2;
+  transition: all 0.5s;
+  
+}
+
+// 表示アニメーション
+.mobile-menu {
+  // ↓メニューを背面に配置した。(固定位置)
+  position: fixed;
+  left: 50%;
+  top: 35%;
+  width: 320px;
+  margin: 0 auto;
+  transform: translate(-50%, -50%);
+
+  &__main {
+      padding: 0;
+      // ↓表示を滑らかにした。
+      perspective: 2000px;
+      transform-style: preserve-3d;
+  }
+  &__ttl {
+    opacity: 0;
+  }
+  &__item {
+      list-style: none;
+      display: block;
+      padding: 0 40px;
+      transform: translate3d(0, 0, -1000px);
+      transition: transform 0.3s, opacity 0.2s;
+      opacity: 0;
+  }
+  &__link {
+      display: block;
+      margin-top: 30px;
+      color: $black;
+      text-decoration: none;
+      
+  }
+}
+
+
+.menu-open {
+  /* スマホhーmenu時にスクロール禁止 */
+  overflow: hidden;
+  // background: url(/images/icon/icon_pc@3x.png);
+	// background-position: right 50% top 12%;
+	// background-repeat: no-repeat;
+	// background-size: 0% auto;
+  & #container {
+    // transform: translate(-1000px, 60px);
+    // z-index: 1000;
+    opacity: 0;
+    transition: 0.01s ease-in, opacity 0.01s ease-out;
+    // box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
+    
+}
+  
+  & .mobile-menu {
+    z-index: 10;
+      &__ttl {
+        position: relative;
+        display: block;
+        text-align: center;
+        letter-spacing: 0.05em;
+        font-size: 40px;
+        letter-spacing: 0.1em;
+        opacity: 1;
+        transition: 0.2s ease-in, opacity 0.5s ease-out;
+        transform-style: preserve-3d;
+      }
+      &__item {
+          transform: none;
+          opacity: 1;
+          /* $iが1から始まり、5で終わる */
+          @for $i from 1 through 5 {
+              /* 0.07sずつ遅らせて表示させる。(二つ目以降も適用) */
+              &:nth-child(#{$i}) {
+                  transition-delay: $i * 0.07s;
+              }
+          }
+      }
+  }
+}
+
+// ハンバーガーメニュータップopen後に表示されるメニュー　↓
+.mobile-menu__main /* ul */ {
+  display: inline-block;
+  list-style: none;
+  margin-bottom: 5px;
+  width: 100%;
+  .mobile-menu__item /* li */ {
+    position: relative;
+    height: .5em;
+    // ボーダーライン↓
+    &::before {
+      position: absolute;
+      content: '';
+      top: 28px;
+      height: 2px;
+      width: 240px;
+      background-color: rgba(200, 200, 200, 0.5);
+      // transform: skewY(5deg);
+    }
+    .mobile-menu__link /* a */ {
+      position: relative;
+      display: block;
+      cursor: pointer;
+      // top: -0.55em;
+      // height: 20px;
+      // transform: skewY(4deg);
+      // &::before {
+      //   position: absolute;
+      //   content: '';
+      //   top: 50%;
+      //   left: 50%;
+      //   height: 3px;
+      //   // width: 0;
+      //   margin-top: -2px;
+      //   opacity: 0;
+      //   border-radius: 2px;
+      //   transition: left .2s ease-out, width .2s ease-out, opacity .2s ease-out;
+      // }
+      .en-title {
+        top: 0;
+        left: 0;
+        font-weight: 400;
+        font-size: $hamberger_nav_left_text;
+      }
+      .ja-title {
+        position: absolute;
+        display: inline-block;
+        top: 10px;
+        right: 0;
+        line-height: 1;
+        font-size: $hamberger_nav_right_text;
+        color: $cSubTitle;
+      }
+    }
+  }
+}

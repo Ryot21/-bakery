@@ -1,0 +1,159 @@
+
+
+    //  TOP イメージ 
+    #main-visual {
+        // height: 500px;
+        // margin-bottom: 20px;
+        overflow: hidden;
+        // object-fit: cover;
+        .SP {
+            @include min-screen($break_point_min) {
+                display: none;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .PC {
+            @include max-screen($break_point_max) {
+                display: none;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+
+    // Service,Work,Blog 共通エリア
+    .l-container {
+        .top-page-ttl {
+            margin-bottom: 20px;
+            text-align: center;
+            
+            @include min-screen($break_point_min) {
+                margin-bottom: 40px;
+                padding-left: 0;
+            }
+            @include min-screen($break_point_pc) {
+                
+            }
+            p {
+                text-align: left;
+                @include min-screen($break_point_min) {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    // Serviceエリア
+    #service {
+        .work-design, .work-coding {
+            text-align: center;
+            padding: 20px;
+            background-color: $white;
+            border-radius: 7px;
+            margin: 20px 20px 0 20px;
+            @include min-screen($break_point_min) {
+                display: inline-block;
+                width: 40%;
+            }
+            @include min-screen($break_point_pc) {
+                width: 505px;
+            }
+            &-icon {
+                width: 100%;
+                img {
+                    width: 100px;
+                    padding-top: 10px;
+                    padding-bottom: 20px;
+                    @include min-screen($break_point_min) {
+                        width: 120px;
+                    }
+                }
+            }
+            .work-design-icon {
+                img {
+                    width: 100px;
+                    padding-top: 10px;
+                    padding-bottom: 20px;
+                    @include min-screen($break_point_min) {
+                        width: 120px;
+                    }
+                }
+            }
+            &-des {
+                width: 100%;
+            }
+        }
+    }
+
+    // Workエリア
+    #work {
+        padding-left: 10px;
+        padding-right: 10px;
+        .portfolio {
+            display: inline-block;
+            color: $white;
+            padding: 10px 20px;
+            margin: 20px 20px 0 20px;
+            border-radius: 7px;
+            background-color: $Dgray;
+            transition: all 0.5s;
+            // border: 4px solid rgba(164, 164, 164, 0.149);
+            @include min-screen($break_point_max) {
+                margin-top: 30px;
+                width: 300px;
+                height: 245px;
+                margin: 30px 10px 0;
+            }
+            @include min-screen($break_point_pc) {
+                margin-top: 30px;
+                width: 340px;
+                height: 255px;
+            }
+            &-ttl {
+                position: relative;
+                &:after {
+                    position:absolute;
+                    top:20px;
+                    right:10px;
+                    content: '';
+                    width: 20px;
+                    height: 20px;
+                    background-image: url(../images/icon/seo.png);
+                    background-size: contain;
+                    @include min-screen($break_point_max) {
+                        top:30px;
+                        right:10px;
+                    }
+                }
+            }
+            &:hover {
+                cursor: pointer;
+                transform: translateY(4px);
+                border-bottom: none;
+                border-bottom: 2px solid $black;
+                background-color: $cSubTitle;
+            }
+        }
+        .PC {
+            @include max-screen($break_point_min) {
+                display: none;
+            }
+        }
+    }
+
+.btn-container {
+	
+	text-align: center;
+    // margin-top: -95px;
+    font-size: $portfolio_day;
+    @include min-screen($break_point_min) {
+        // margin-top: -100px;
+    }
+    @include min-screen($break_point_pc) {
+        // margin-top: -150px;
+        font-size: $portfolio_title;
+    }
+}

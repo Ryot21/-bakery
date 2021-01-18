@@ -1,0 +1,192 @@
+
+.PC {
+  width: 100%;
+  @include max-screen($break_point_min) {
+    display: none;
+  }
+  .main-img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+  
+  }
+}
+.SP {
+  @include min-screen($break_point_min) {
+    display: none;
+  }
+
+}
+.l-out-shadow {
+  box-shadow: 2px 2px 4px -2px $shadow;
+}
+.ll-out-shadow {
+  box-shadow: 5px 5px 4px 2px $shadow;
+
+}
+.l-in-shadow {
+  // box-shadow: 2px 2px 4px -2px gray inset;
+  box-shadow: 2px 2px 4px 2px gray inset;
+}
+
+
+// シングルページのタイトル
+
+  .single-ttl {
+    // border-bottom: 2px solid #000;
+    display: inline-block;
+    padding-bottom: 30px;
+    text-shadow: 3px 3px 2px silver;
+  }
+  .single-ttl-text {
+    text-align: start;
+    padding-bottom: 20px;
+  }
+
+
+.sp-br {
+  @include min-screen($break_point_1440) {
+      display: none;
+  }
+}
+
+// 共通のスタイル
+
+#main {
+  width: 100%;
+  background-color: $white;
+  .main-inner {
+      // max-width: 400px;
+      margin: 0 auto;
+      padding: 0 30px;
+      // background-color: $lightgray;
+
+      @include min-screen($break_point_max) {
+        max-width: 750px;
+    }
+      @include min-screen($break_point_pc) {
+          max-width: 1200px;
+      }
+  }
+}
+
+
+.l-container {
+  width: 100%;
+  padding: 30px 0;
+  margin-top: 100px;
+  // background-color: $lightgray;
+  text-align: center;
+  border-radius: 7px;
+  z-index: 4;
+  // &:first-child {
+  //   margin: 100px auto 0;
+  // }
+  // work一覧リンクがある為、間隔調整
+  &:last-child {
+    margin-top: 60px;
+  }
+
+  @include min-screen($break_point_min) {
+    margin-top: 150px;
+      // work一覧リンクがある為、間隔調整
+    &:last-child {
+      margin-top: 100px;
+    }
+  }
+
+
+// about,work,blog,contactページの
+.ttl {
+    border-bottom: 2px solid #000;
+    display: inline-block;
+}
+
+  // @include min-screen($break_point_pc) {
+  //   margin: 150px auto;
+  //   &:first-child {
+  //     margin: 100px auto;
+  //   }
+  // }
+}
+
+#blog {
+  padding: 30px 0 10px;
+}
+
+.l-wrapper {
+  overflow: hidden;
+  margin: 0 auto;
+  @include min-screen($break_point_pc) {
+
+  }
+}
+.l-content {
+  width: 100%;
+  padding: 30px 0;
+  margin: 30px auto;
+  background-color: $lightgray;
+  text-align: center;
+  border-radius: 7px;
+  @include min-screen($break_point_min) {
+    padding: 30px 0;
+  }
+}
+
+
+.l-nav {
+  padding: 0 10px;
+}
+.l-sns {
+  width: 100%;
+  background-color: $white;
+  margin: 50px auto 0;
+  transition: .3s;
+  @include min-screen($break_point_min) {
+    margin: 50px auto 10px;
+  }
+  @include min-screen($break_point_pc) {
+  width: 100%;
+  padding: 20px 40px;
+  margin-top: 100px;
+  }
+}
+.l-blog {
+  background-color: $Dgray;
+  // height: 100px;
+  padding: 10px;
+  border-radius: 7px;
+  margin: 30px 30px 0;
+}
+.l-contact {
+  padding: 30px;
+}
+
+  // thanksページ　コンテンツ量が少ない為、ヘッダー位置が定まらない為、
+  // 下記の設定をする
+  .l-main {
+    min-height: calc(100vh - 290px);
+  }
+  .l-footer {
+    height: 180px;
+  }
+  @include max-screen($break_point_iPad) {
+    .l-main {
+      min-height: calc(100vh - 350px);
+    }
+    // .l-footer {
+    //   height: 350px;
+    // }
+  }
+
+// スマホのみ改行
+  @include min-screen($break_point_min) {
+    .sp-br {
+      display: none;
+    }
+  }
+  @include max-screen($break_point_414) {
+    .pc-br {
+      display: none;
+    }
+  }

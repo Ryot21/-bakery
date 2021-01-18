@@ -1,0 +1,67 @@
+
+
+//  Work一覧ページ
+
+.portfolio_lineup {
+	display: inline-block;
+	color: $white;
+	padding: 10px 20px;
+	margin: 20px 20px 0 20px;
+	max-width: 250px;
+	height: 210px;
+	border-radius: 7px;
+	background-color: $Dgray;
+	transition: all 0.5s;
+	@include min-screen($break_point_max) {
+		margin-top: 30px;
+		width: 300px;
+		height: 210px;
+		margin: 30px 10px 0;
+	}
+	@include min-screen($break_point_pc) {
+		margin-top: 30px;
+		width: 250px;
+		height: 210px;
+	}
+	.portfolio_lineup-ttl {
+		position: relative;
+		&:after {
+			position:absolute;
+			top:25px;
+			right:10px;
+			content: '';
+			width: 25px;
+			height: 25px;
+			background-image: url(../images/icon/seo.png);
+			background-size: contain;
+		}
+		.top-text {
+			color: $white;
+			font-size: $portfolio_title;
+			padding-top: 10px;
+			line-height: 1.5;
+			@media screen and (min-width: 735px) {
+				font-size: $portfolio_title_tb;
+				padding-top: 5px;
+				line-height: 1.8;
+			}
+		}
+		.bottom-text {
+			color: $gray;
+			font-size: $portfolio_day;
+			line-height: 1.5;
+		}
+	}
+	&:hover {
+		cursor: pointer;
+		transform: translateY(4px);
+		border-bottom: none;
+		border-bottom: 2px solid $black;
+		background-color: $cSubTitle;
+	}
+}
+.PC {
+	@include max-screen($break_point_min) {
+		display: none;
+	}
+}

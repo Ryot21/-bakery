@@ -1,0 +1,45 @@
+
+.blog-content {
+    padding: 0 10px;
+    @include min-screen($break_point_min) {
+        padding: 0 100px;
+    }
+    @include min-screen($break_point_pc) {
+        padding: 0 150px;
+    }
+}
+
+// ブログまとめ
+.blog {
+    &-content {
+
+    }
+    &-box {
+        padding-top: 50px;
+    }
+    &-title {
+        font-size: $SP_blog_title;
+        @include min-screen($break_point_min) {
+            font-size: $TB_blog_title;
+        }
+        @include min-screen($break_point_pc) {
+            font-size: $PC_blog_title;
+        }
+    }
+    &-day {
+
+    }
+    &-img {
+        width: 100%;
+        height: auto;
+        border: none;
+        padding: 15px 0;
+        @include min-screen($break_point_min) {
+            padding: 20px 0;
+        }
+    }
+    &-text {
+        line-height: 2;
+        text-align: start;
+    }
+}

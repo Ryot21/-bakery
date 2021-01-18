@@ -1,0 +1,86 @@
+
+// ブラウザのデフォルトサイズは
+// 100% = 1em = 1rem = 16px = 12pt
+
+
+// 共通
+h1,h2,h3,h4,p,a,span {
+    color: $Dgray;
+    font-family: "Noto Sans JP", sans-serif;
+}
+// TOPページ > SERVICE,WORK,BLOG > TITLE
+.top-page-ttl, .btn-container, .single-ttl, .mobile-menu__ttl, .mobile-menu__link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+.top-page-ttl {
+    text-shadow: 2px 2px 2px silver;
+}
+
+
+
+// ヘッダー
+$header_logo_fontsize: 23px;
+$header_logo_sp_fontsize: 23px;
+$header_nav_fontsize: 15px;
+$header_nav_bottom_fontsize: 12px;
+$hamberger_nav_left_text: 16px;
+$hamberger_nav_right_text: 12px;
+$portfolio_title: 18px;
+$portfolio_day: 14px;
+$portfolio_title_tb: 21px;
+$portfolio_day_tb: 14px;
+
+$footer_title: 18px;
+
+$SP_title: 30px;
+$TB_title: 35px;
+$PC_title: 40px;
+$SP_blog_title: 24px;
+$TB_blog_title: 30px;
+$PC_blog_title: 35px;
+$SP_contact_fontsize: 16px;
+$TB_contact_fontsize: 16px;
+$SP_thanks_title: 24px;
+$PC_thanks_title: 35px;
+
+// TOPページ
+.main-font {
+    font-size: $SP_title;
+    @media screen and (min-width: 735px) {
+        font-size: $TB_title;
+    }
+    @media screen and (min-width: 735px) {
+        font-size: $PC_title;
+    }
+}
+
+// TOPページ > SERVICE > DESIGN,CODING
+.lg-ttl {
+    color: $Dgray;
+    font-size: 20px;
+    line-height: 1;
+}
+.sm-ttl {
+    color: $gray;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+// TOPページ,WORKページ > Portfolio
+.top-text {
+    color: $white;
+    font-size: $portfolio_title;
+    padding-top: 10px;
+    line-height: 1.5;
+    @media screen and (min-width: 735px) {
+        font-size: $portfolio_title_tb;
+        padding-top: 5px;
+        line-height: 1.8;
+    }
+}
+.bottom-text {
+    color: $gray;
+    font-size: $portfolio_day;
+    line-height: 1.5;
+}
