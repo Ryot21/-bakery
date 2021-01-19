@@ -65,7 +65,7 @@ l-header
       display: flex;
       // height: calc(100vh - 100px);
       height: 880px;
-      background-color: aqua;
+      // background-color: aqua;
       .left-block {
           background: #668e68;
           width: 190px;
@@ -96,11 +96,10 @@ l-header
                       a {
                           width: 100%;
                           padding: 8px 0;
-                          color: #ffffff;
                           text-decoration: none;
                           .en {
                               display: block;
-                              font-family: 'Cantarell', sans-serif;
+                              color: #ffffff;
                               font-size: 12px;
                               font-weight: bold;
                               letter-spacing: 2px;
@@ -108,6 +107,7 @@ l-header
                           }
                           .jp {
                               display: block;
+                              color: #ffffff;
                               font-size: 10px;
                               margin: 3px auto 0;
                               letter-spacing: 3px;
@@ -121,7 +121,7 @@ l-header
           .bottom_block {
               position: absolute;
               width: 190px;
-              bottom: 330px;
+              bottom: 110px;
               left: 0;
               .shop-link {
                   text-align: center;
@@ -129,13 +129,14 @@ l-header
           }
       }
       .right-block {
-          width: 1020px;
+          width: calc(100% - 240px);
           margin: 80px 0 0 60px;
           position: relative;
-          background-color: red;
+          // background-color: red;
           .main-logo {
               position: absolute;
-              top: -53px;
+              width: 400px;
+              top: -23px;
               left: -26px;
               z-index: 2;
           }

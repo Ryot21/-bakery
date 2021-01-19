@@ -92,4 +92,19 @@
 }
 .slide-img img{
   display: block;
+  width: 100%;
+}
+.slider-text {
+  position: absolute;
+  writing-mode: vertical-rl;
+  top: 12px;
+  right: 85px;
+  z-index: 2;
+  font-size: 14px;
+  span {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 5px;
+    line-height: 3.4;
+    letter-spacing: 0.34em;
+  }
 }

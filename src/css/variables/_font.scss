@@ -8,13 +8,15 @@ h1,h2,h3,h4,p,a,span {
     color: $Dgray;
     font-family: "Noto Sans JP", sans-serif;
 }
+p {
+    text-align: justify;
+}
 // TOPページ > SERVICE,WORK,BLOG > TITLE
 .top-page-ttl, .btn-container, .single-ttl, .mobile-menu__ttl, .mobile-menu__link {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-}
-.top-page-ttl {
-    text-shadow: 2px 2px 2px silver;
+
+    color: $brown;
+    font-weight: 400;
+
 }
 
 
@@ -26,8 +28,8 @@ $header_nav_fontsize: 15px;
 $header_nav_bottom_fontsize: 12px;
 $hamberger_nav_left_text: 16px;
 $hamberger_nav_right_text: 12px;
-$portfolio_title: 18px;
-$portfolio_day: 14px;
+$blog_title: 16px;
+$blog_day: 14px;
 $portfolio_title_tb: 21px;
 $portfolio_day_tb: 14px;
 
@@ -70,7 +72,7 @@ $PC_thanks_title: 35px;
 // TOPページ,WORKページ > Portfolio
 .top-text {
     color: $white;
-    font-size: $portfolio_title;
+    font-size: $blog_title;
     padding-top: 10px;
     line-height: 1.5;
     @media screen and (min-width: 735px) {
@@ -81,6 +83,6 @@ $PC_thanks_title: 35px;
 }
 .bottom-text {
     color: $gray;
-    font-size: $portfolio_day;
+    font-size: $blog_day;
     line-height: 1.5;
 }

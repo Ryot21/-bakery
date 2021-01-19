@@ -35,22 +35,7 @@
 			background-image: url(../images/icon/seo.png);
 			background-size: contain;
 		}
-		.top-text {
-			color: $white;
-			font-size: $portfolio_title;
-			padding-top: 10px;
-			line-height: 1.5;
-			@media screen and (min-width: 735px) {
-				font-size: $portfolio_title_tb;
-				padding-top: 5px;
-				line-height: 1.8;
-			}
-		}
-		.bottom-text {
-			color: $gray;
-			font-size: $portfolio_day;
-			line-height: 1.5;
-		}
+
 	}
 	&:hover {
 		cursor: pointer;
