@@ -1089,21 +1089,6 @@ big {
   bottom: 17px;
 }
 
-.swiper-slide::before {
-  content: "";
-  background-image: url(/images/yane.png);
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: -1px;
-  left: 0;
-  right: 0;
-  z-index: 1;
-}
-
 .img-size {
   position: relative;
   padding-bottom: 50px;
@@ -1569,19 +1554,18 @@ l-header
   background: #668e68;
   width: 190px;
   height: 100%;
-  padding: 50px 0 0;
 }
 
 .portfolio .l-header .left-block__nav {
   position: relative;
-  width: 190px;
+  width: 100%;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
 }
 
 .portfolio .l-header .left-block__nav .logo {
-  width: 100px;
+  width: 60px;
   min-height: 0%;
   margin: 0 auto;
 }
@@ -1594,7 +1578,7 @@ l-header
   width: 100%;
   min-height: 0%;
   padding: 0;
-  margin: 60px auto 0;
+  margin: 20px auto 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1630,14 +1614,16 @@ l-header
 }
 
 .portfolio .l-header .left-block .bottom_block {
-  position: absolute;
-  width: 190px;
-  bottom: 110px;
-  left: 0;
+  width: 100%;
+  padding-top: 20px;
 }
 
 .portfolio .l-header .left-block .bottom_block .shop-link {
   text-align: center;
+}
+
+.portfolio .l-header .left-block .bottom_block .shop-link img {
+  width: 80px !important;
 }
 
 .portfolio .l-header .right-block {
@@ -2262,16 +2248,15 @@ l-header
   position: relative;
   display: inline-block;
   color: #ffffff;
-  padding: 10px;
-  margin: 20px 20px 0 20px;
+  padding: 10px 0;
   border-radius: 7px;
   transition: all 0.5s;
 }
 
 #blog .blog-box .blog-category {
   position: absolute;
-  right: 10px;
-  bottom: 86px;
+  right: 0px;
+  bottom: 64px;
   min-width: 90px;
   color: #000000;
   font-size: 10px;
@@ -2303,7 +2288,6 @@ l-header
   -webkit-transform: translateY(4px);
   transform: translateY(4px);
   border-bottom: none;
-  border-bottom: 2px solid #000000;
   background-color: #535353;
 }
 
@@ -2397,6 +2381,109 @@ l-header
   background-size: cover;
   padding: 200px 0 280px;
   margin-top: -100px;
+}
+
+#news .news-block {
+  width: 100%;
+  letter-spacing: 5px;
+}
+
+#news .news-block-inner {
+  padding: 10px 0;
+}
+
+#news .news-block .news-box .left-day_box {
+  color: #C3995D;
+}
+
+#news .news-block .news-box .right-txt_box {
+  padding-top: 5px;
+  text-decoration: underline;
+}
+
+#appeal {
+  background: url(/images/AdobeStock_251969990_Preview.jpeg) center no-repeat;
+  background-position: right 70% bottom 0%;
+  background-size: cover;
+  padding: 90px 0 80px;
+}
+
+#appeal .area-wrap {
+  width: 100%;
+  margin: 0 0 0 auto;
+}
+
+#appeal .appeal-header {
+  font-size: 30px;
+  font-family: 'Gorditas', cursive;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#appeal .appeal-txt {
+  padding: 10px 50px;
+}
+
+#appeal .appeal-txt p {
+  padding-bottom: 20px;
+  line-height: 1.8;
+}
+
+#menu .left-box,
+#menu .right-box {
+  width: 100%;
+}
+
+#menu .left-box_top {
+  margin: 12px;
+}
+
+#menu .left-box_top a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#menu .left-box_top a .img-box img {
+  transition: 2s;
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  vertical-align: top;
+}
+
+#menu .left-box_top a .txt-box {
+  background: rgba(101, 80, 70, 0.5);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 0.8s;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+
+#menu .left-box_top a .txt-box .txt {
+  margin: auto;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.34em;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#menu .left-box_top a .txt-box .txt-ttl {
+  font-size: 20px;
+  line-height: 1.4;
 }
 
 .portfolio_lineup {
@@ -3034,6 +3121,10 @@ l-header
     line-height: 1.8;
   }
 
+  .portfolio .l-header {
+    height: 500px;
+  }
+
   #main .main-inner {
     max-width: 750px;
   }
@@ -3077,10 +3168,35 @@ l-header
     margin: 30px 10px 0;
   }
 
+  #blog .blog-box .blog-category {
+    right: 10px;
+    bottom: 48px;
+  }
+
   #blog .blog-box .blog-ttl .top-text {
     font-size: 16px;
     padding-top: 5px;
     line-height: 1.8;
+  }
+
+  #appeal {
+    background-position: right 60% bottom 0%;
+  }
+
+  #appeal .area-wrap {
+    width: 750px;
+  }
+
+  #appeal .appeal-header {
+    font-size: 48px;
+  }
+
+  #menu .menu-box .left-box {
+    width: 50%;
+  }
+
+  #menu .menu-box .right-box {
+    width: 50%;
   }
 
   .portfolio_lineup {
@@ -3399,6 +3515,21 @@ l-header
     font-size: 16px;
   }
 
+  .swiper-slide::before {
+    content: "";
+    background-image: url(/images/yane.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
   .img-size .lg-ttl {
     width: 85%;
   }
@@ -3437,6 +3568,11 @@ l-header
 
   .gnav-btn {
     display: none;
+  }
+
+  .portfolio .l-header .left-block {
+    width: 140px;
+    padding: 30px 0 0;
   }
 
   .SP {
@@ -3534,6 +3670,21 @@ l-header
     width: 120px;
   }
 
+  #news .news-block .news-box {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  #news .news-block .news-box .left-day_box {
+    width: 30%;
+    color: #C3995D;
+  }
+
+  #news .news-block .news-box .right-txt_box {
+    width: 70%;
+  }
+
   .u-pc-hide {
     display: none !important;
   }
@@ -3607,6 +3758,27 @@ l-header
   .l-header {
     width: 100%;
     height: 80px;
+  }
+
+  .portfolio .l-header {
+    height: 780px;
+  }
+
+  .portfolio .l-header .left-block {
+    padding: 50px 0 0;
+  }
+
+  .portfolio .l-header .left-block__nav .logo {
+    width: 100px;
+  }
+
+  .portfolio .l-header .left-block__nav .header-nav {
+    margin: 60px auto 0;
+  }
+
+  .portfolio .l-header .left-block .bottom_block .shop-link img {
+    width: 100px;
+    padding-top: 150px;
   }
 
   #main .main-inner {
@@ -3719,13 +3891,22 @@ l-header
   }
 
   #blog .blog-box {
-    margin-top: 30px;
+    margin: 30px 10px 0 10px;
     width: 256px;
     height: 255px;
   }
 
+  #blog .blog-box .blog-category {
+    right: 10px;
+    bottom: 86px;
+  }
+
   .btn-container {
     font-size: 16px;
+  }
+
+  #appeal {
+    background-position: right 50% bottom 0%;
   }
 
   .portfolio_lineup {
@@ -3751,7 +3932,7 @@ l-header
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .portfolio .l-header {
     display: block;
     overflow: hidden;

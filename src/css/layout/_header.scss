@@ -23,7 +23,7 @@ l-header
 
 // ここから追記
 .portfolio {
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 767px){
     .l-header {
       display: block;
       overflow: hidden;
@@ -43,6 +43,8 @@ l-header
           top: 40%;
           left: 50%;
           transform: translate(-50%, -50%);
+
+
 
         }
         .swiper-container {
@@ -65,20 +67,34 @@ l-header
       display: flex;
       // height: calc(100vh - 100px);
       height: 880px;
-      // background-color: aqua;
+      @include min-screen($break_point_max) {
+        height: 500px;
+      }
+      @include min-screen($break_point_pc) {
+        height: 780px;
+      }
       .left-block {
           background: #668e68;
           width: 190px;
           height: 100%;
-          padding: 50px 0 0;
+          @include min-screen($break_point_min) {
+            width: 140px;
+            padding: 30px 0 0;
+          }
+          @include min-screen($break_point_pc) {
+            padding: 50px 0 0;
+          }
           &__nav {
               position: relative;
-              width: 190px;
+              width: 100%;
               flex-direction: column;
               .logo {
-                  width: 100px;
+                  width: 60px;
                   min-height: 0%;
                   margin: 0 auto;
+                  @include min-screen($break_point_pc) {
+                    width: 100px;
+                  }
                   &-header {
                       display: block;
                       
@@ -88,8 +104,11 @@ l-header
                   width: 100%;
                   min-height: 0%;
                   padding: 0;
-                  margin: 60px auto 0;
+                  margin: 20px auto 0;
                   flex-direction: column;
+                  @include min-screen($break_point_pc) {
+                    margin: 60px auto 0;
+                  }
                   li {
                       height: auto;
                       margin: 40px 0 0;
@@ -119,12 +138,17 @@ l-header
           }
 
           .bottom_block {
-              position: absolute;
-              width: 190px;
-              bottom: 110px;
-              left: 0;
+              width: 100%;
+              padding-top: 20px;
               .shop-link {
-                  text-align: center;
+                text-align: center;
+                img {
+                  width: 80px !important;
+                  @include min-screen($break_point_pc) {
+                    width: 100px;
+                    padding-top: 150px;
+                  }
+                }
               }
           }
       }
