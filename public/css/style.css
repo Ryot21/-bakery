@@ -1294,6 +1294,10 @@ use icon fontawesome
 
 /* 共通レイアウト(header, footer, etc.) */
 
+.footer-logo .tagline {
+  text-align: center;
+}
+
 .footer-nav {
   padding: 5px 0;
 }
@@ -1711,15 +1715,14 @@ l-header
 
 .l-container {
   width: 100%;
-  padding: 30px 0;
-  margin-top: 100px;
+  padding: 100px 0;
   text-align: center;
   border-radius: 7px;
   z-index: 4;
 }
 
 .l-container:last-child {
-  margin-top: 60px;
+  padding-top: 60px;
 }
 
 .l-container .ttl {
@@ -2429,12 +2432,17 @@ l-header
   line-height: 1.8;
 }
 
+#menu {
+  background-color: #b98e514b;
+}
+
 #menu .left-box,
 #menu .right-box {
   width: 100%;
 }
 
 #menu .left-box_top {
+  position: relative;
   margin: 12px;
 }
 
@@ -2484,6 +2492,149 @@ l-header
 #menu .left-box_top a .txt-box .txt-ttl {
   font-size: 20px;
   line-height: 1.4;
+}
+
+#menu .left-box_bottom {
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#menu .left-box_flex {
+  position: relative;
+  width: calc(50% - 40px);
+  margin: 20px;
+}
+
+#menu .left-box_flex a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+#menu .left-box_flex a:hover {
+  transition: 0.3s;
+}
+
+#menu .right-box_top {
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#menu .right-box_flex {
+  position: relative;
+  width: calc(50% - 40px);
+  margin: 20px;
+}
+
+#menu .right-box_flex a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+#menu .right-box_bottom {
+  position: relative;
+  margin: 12px;
+}
+
+#menu .right-box_bottom a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#menu .right-box_bottom a:hover {
+  transition: 0.3s;
+}
+
+#menu .right-box_bottom a .img-box img {
+  transition: 2s;
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  vertical-align: top;
+}
+
+#menu .right-box_bottom a .txt-box {
+  background: rgba(101, 80, 70, 0.5);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 0.8s;
+  opacity: 0;
+}
+
+#menu .right-box_bottom a .txt-box:hover {
+  transition: 0.8s;
+  opacity: 1;
+}
+
+#menu .right-box_bottom a .txt-box .txt {
+  margin: auto;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.34em;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#menu .right-box_bottom a .txt-box .txt-ttl {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+#menu .menu-box .txt-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(101, 80, 70, 0.5);
+  transition: 0.8s;
+  opacity: 0;
+}
+
+#menu .menu-box .txt-box:hover {
+  transition: 0.8s;
+  opacity: 1;
+}
+
+#menu .menu-box .txt-box .txt {
+  position: absolute;
+  margin: auto;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.34em;
+  top: 50%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#menu .btn-container {
+  margin-top: 53px;
+  margin-bottom: -30px;
 }
 
 .portfolio_lineup {
@@ -3191,14 +3342,6 @@ l-header
     font-size: 48px;
   }
 
-  #menu .menu-box .left-box {
-    width: 50%;
-  }
-
-  #menu .menu-box .right-box {
-    width: 50%;
-  }
-
   .portfolio_lineup {
     margin-top: 30px;
     width: 300px;
@@ -3580,11 +3723,11 @@ l-header
   }
 
   .l-container {
-    margin-top: 150px;
+    padding-top: 150px;
   }
 
   .l-container:last-child {
-    margin-top: 100px;
+    padding-top: 100px;
   }
 
   .l-content {
@@ -3679,10 +3822,29 @@ l-header
   #news .news-block .news-box .left-day_box {
     width: 30%;
     color: #C3995D;
+    text-align: end;
   }
 
   #news .news-block .news-box .right-txt_box {
     width: 70%;
+  }
+
+  #menu .menu-box {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  #menu .menu-box .left-box {
+    width: 50%;
+  }
+
+  #menu .menu-box .right-box {
+    width: 50%;
   }
 
   .u-pc-hide {
