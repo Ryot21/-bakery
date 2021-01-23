@@ -96,13 +96,13 @@
             position: relative;
             display: inline-block;
             color: $white;
-            padding: 10px 0;
+            padding: 10px;
             border-radius: 7px;
             transition: all 0.5s;
             @include min-screen($break_point_max) {
                 margin-top: 30px;
                 width: 300px;
-                height: 245px;
+                height: 260px;
                 margin: 30px 10px 0;
             }
             @include min-screen($break_point_pc) {
@@ -112,7 +112,7 @@
             }
             .blog-category {
                 position: absolute;
-                right: 0px;
+                right: 10px;
                 bottom: 64px;
                 min-width: 90px;
                 color: $black;
@@ -122,12 +122,10 @@
                 padding: 5px;
                 background-color: rgba(255, 255, 255, 0.926);
                 @include min-screen($break_point_max) {
-                    right: 10px;
-                    bottom: 48px;
+                    bottom: 63px;
                 }
                 @include min-screen($break_point_pc) {
-                    right: 10px;
-                    bottom: 86px;
+                    bottom: 88px;
                 }
             }
             .blog-ttl {
@@ -166,20 +164,23 @@
             }
         }
     }
+
+    // moreボタン
     .btn-container {
-        // ボタン角削りcss
+        
         position: relative;
-        background: #b98e51;
         width: 200px;
         height: 40px;
-        // padding: 0 0 0 20px;
         margin: 0 auto;
+        font-size: 16px;
+        font-weight: bold;
         color: #ffffff;
         letter-spacing: 0.2em;
         text-align: center;
-        line-height: 2.3;
+        line-height: 2.2;
         margin-top: 30px;
-        font-size: $blog_day;
+        margin-bottom: -80px;
+        // ボタン角削りcss
         background:
         linear-gradient(45deg,  transparent 15px, $brown 15px),
         linear-gradient(135deg, transparent 15px, $brown 15px),
@@ -188,7 +189,6 @@
         background-position: bottom left, top left, top right, bottom right;
         background-size: 50% 50%;
         background-repeat: no-repeat;
-
         // 下記矢印css
         &::before {
             position: absolute;
@@ -217,10 +217,8 @@
             transform: rotate(45deg);
         }
         @include min-screen($break_point_min) {
-            // margin-top: -100px;
         }
         @include min-screen($break_point_pc) {
-            // margin-top: -150px;
             font-size: $blog_title;
         }
     }
@@ -549,4 +547,77 @@
             margin-top: 53px;
             margin-bottom: -30px;
         } 
+    }
+
+    // SHOPINFOエリア
+    #shopinfo {
+        .shopinfo-box {
+            &_txt {
+                .shop-left, .shop-right {
+                    width: 100%;
+                }
+                .shop-left {
+                    padding:10px;
+                    line-height: 1.8;
+                    letter-spacing: 0.22em;
+                    text-align: left;
+                }
+                .shop-right {
+                    
+                }
+                // 店名
+                .shop-name {
+                    color: #b98e51;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+                // 住所
+                .shop-address {
+                    margin: 10px 0 0 0;
+                }
+                .shop-contact {
+                    .tel_box, .mail_box {
+                        font-size: 16px;
+                        font-weight: bold;
+                        line-height: 1.5;
+                    }
+                    .tel-ttl, .mail-ttl {
+                        display: inline-block;
+                        width: 80px;
+                        color: #668e68;
+                    }
+                }
+                .shop-time {
+                    line-height: 1.5;
+                }
+                .info-wrap:not(:first-child) {
+                    margin: 20px 0 0;
+                }
+                // TB・PC専用
+                @include min-screen($break_point_max) {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .shop-left, .shop-right {
+                        width: 50%;
+                    }
+                    .shop-left {
+
+                    }
+                    .shop-right {
+
+                    }
+                }
+                @include min-screen($break_point_pc) {
+                    .shop-left {
+                        width: 40%;
+                        padding-top: 50px;
+                        padding-left: 60px;
+                    }
+                    .shop-right {
+                        width: 60%;
+                    }
+                }
+            }
+        }
     }

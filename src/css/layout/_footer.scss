@@ -1,21 +1,54 @@
+@include min-screen($break_point_min) {
+    .footer-flex {
+            display: flex;
+    }
+}
+
+
 .footer-logo {
-    .tagline {
-        text-align: center;
+    width: 110px;
+    margin: 10px auto;
+    vertical-align: bottom;
+}
+.footer-navblock {
+    width: 100%;
+    .footer-nav {
+        padding: 10px 0;
+        li {
+            padding: 10px;
+            a span {
+                font-size: 14px;
+                color: white !important;
+                text-align: center;
+            }
+            .jp {
+                font-size: 12px;
+            }
+        }
+    }
+}
+@include min-screen($break_point_min) {
+    .footer-logo {
+        width: 100px;
+        margin: 10px auto;
+    }
+    .footer-navblock {
+        width: 100%;
+        padding: 30px;
+        margin: 0 auto;
+        .footer-nav {
+            display: flex;
+            padding: 10px 0;
+            li {
+                padding: 5px 20px;
+                a span {
+                    color: white !important;
+                }
+            }
+        }
     }
 }
 
-.footer-nav {
-    padding: 5px 0;
-    .icon {
-        padding: 0 5px;
-    }
-    a {
-        padding: 0 5px;
-    }
-}
-
-.tagline {
-    @include min-screen($break_point_pc) {
-        font-size: $footer_title;
-    }
+.footer-copy {
+    text-align: center;
 }

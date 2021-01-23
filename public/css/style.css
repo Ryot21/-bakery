@@ -1294,20 +1294,36 @@ use icon fontawesome
 
 /* 共通レイアウト(header, footer, etc.) */
 
-.footer-logo .tagline {
+.footer-logo {
+  width: 110px;
+  margin: 10px auto;
+  vertical-align: bottom;
+}
+
+.footer-navblock {
+  width: 100%;
+}
+
+.footer-navblock .footer-nav {
+  padding: 10px 0;
+}
+
+.footer-navblock .footer-nav li {
+  padding: 10px;
+}
+
+.footer-navblock .footer-nav li a span {
+  font-size: 14px;
+  color: white !important;
   text-align: center;
 }
 
-.footer-nav {
-  padding: 5px 0;
+.footer-navblock .footer-nav li .jp {
+  font-size: 12px;
 }
 
-.footer-nav .icon {
-  padding: 0 5px;
-}
-
-.footer-nav a {
-  padding: 0 5px;
+.footer-copy {
+  text-align: center;
 }
 
 /*=========================
@@ -1555,7 +1571,7 @@ l-header
 }
 
 .portfolio .l-header .left-block {
-  background: #668e68;
+  background: #69492c;
   width: 190px;
   height: 100%;
 }
@@ -1713,6 +1729,15 @@ l-header
   padding: 0 30px;
 }
 
+#footer {
+  width: 100%;
+}
+
+#footer .main-inner {
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
 .l-container {
   width: 100%;
   padding: 100px 0;
@@ -1728,10 +1753,6 @@ l-header
 .l-container .ttl {
   border-bottom: 2px solid #000;
   display: inline-block;
-}
-
-#blog {
-  padding: 30px 0 10px;
 }
 
 .l-wrapper {
@@ -1775,7 +1796,13 @@ l-header
 }
 
 .l-footer {
-  height: 180px;
+  color: white;
+  background-color: #69492c;
+  padding: 30px 100px;
+}
+
+.l-footer .l-container {
+  padding: 0 !important;
 }
 
 .l-sidebar {
@@ -2251,14 +2278,14 @@ l-header
   position: relative;
   display: inline-block;
   color: #ffffff;
-  padding: 10px 0;
+  padding: 10px;
   border-radius: 7px;
   transition: all 0.5s;
 }
 
 #blog .blog-box .blog-category {
   position: absolute;
-  right: 0px;
+  right: 10px;
   bottom: 64px;
   min-width: 90px;
   color: #000000;
@@ -2301,16 +2328,17 @@ l-header
 
 .btn-container {
   position: relative;
-  background: #b98e51;
   width: 200px;
   height: 40px;
   margin: 0 auto;
+  font-size: 16px;
+  font-weight: bold;
   color: #ffffff;
   letter-spacing: 0.2em;
   text-align: center;
-  line-height: 2.3;
+  line-height: 2.2;
   margin-top: 30px;
-  font-size: 14px;
+  margin-bottom: -80px;
   background: linear-gradient(45deg, transparent 15px, #C3995D 15px), linear-gradient(135deg, transparent 15px, #C3995D 15px), linear-gradient(225deg, transparent 15px, #C3995D 15px), linear-gradient(315deg, transparent 15px, #C3995D 15px);
   background-position: bottom left, top left, top right, bottom right;
   background-size: 50% 50%;
@@ -2635,6 +2663,50 @@ l-header
 #menu .btn-container {
   margin-top: 53px;
   margin-bottom: -30px;
+}
+
+#shopinfo .shopinfo-box_txt .shop-left,
+#shopinfo .shopinfo-box_txt .shop-right {
+  width: 100%;
+}
+
+#shopinfo .shopinfo-box_txt .shop-left {
+  padding: 10px;
+  line-height: 1.8;
+  letter-spacing: 0.22em;
+  text-align: left;
+}
+
+#shopinfo .shopinfo-box_txt .shop-name {
+  color: #b98e51;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#shopinfo .shopinfo-box_txt .shop-address {
+  margin: 10px 0 0 0;
+}
+
+#shopinfo .shopinfo-box_txt .shop-contact .tel_box,
+#shopinfo .shopinfo-box_txt .shop-contact .mail_box {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+#shopinfo .shopinfo-box_txt .shop-contact .tel-ttl,
+#shopinfo .shopinfo-box_txt .shop-contact .mail-ttl {
+  display: inline-block;
+  width: 80px;
+  color: #668e68;
+}
+
+#shopinfo .shopinfo-box_txt .shop-time {
+  line-height: 1.5;
+}
+
+#shopinfo .shopinfo-box_txt .info-wrap:not(:first-child) {
+  margin: 20px 0 0;
 }
 
 .portfolio_lineup {
@@ -3280,6 +3352,10 @@ l-header
     max-width: 750px;
   }
 
+  #footer .main-inner {
+    max-width: 750px;
+  }
+
   .l-container .about-box {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -3315,13 +3391,12 @@ l-header
   #blog .blog-box {
     margin-top: 30px;
     width: 300px;
-    height: 245px;
+    height: 260px;
     margin: 30px 10px 0;
   }
 
   #blog .blog-box .blog-category {
-    right: 10px;
-    bottom: 48px;
+    bottom: 63px;
   }
 
   #blog .blog-box .blog-ttl .top-text {
@@ -3340,6 +3415,20 @@ l-header
 
   #appeal .appeal-header {
     font-size: 48px;
+  }
+
+  #shopinfo .shopinfo-box_txt {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  #shopinfo .shopinfo-box_txt .shop-left,
+  #shopinfo .shopinfo-box_txt .shop-right {
+    width: 50%;
   }
 
   .portfolio_lineup {
@@ -3664,12 +3753,11 @@ l-header
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 100% auto;
-    width: 100%;
+    width: 110%;
     height: 100%;
     position: absolute;
     top: -1px;
-    left: 0;
-    right: 0;
+    right: -20px;
     z-index: 1;
   }
 
@@ -3709,6 +3797,38 @@ l-header
     text-align: left;
   }
 
+  .footer-flex {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .footer-logo {
+    width: 100px;
+    margin: 10px auto;
+  }
+
+  .footer-navblock {
+    width: 100%;
+    padding: 30px;
+    margin: 0 auto;
+  }
+
+  .footer-navblock .footer-nav {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 10px 0;
+  }
+
+  .footer-navblock .footer-nav li {
+    padding: 5px 20px;
+  }
+
+  .footer-navblock .footer-nav li a span {
+    color: white !important;
+  }
+
   .gnav-btn {
     display: none;
   }
@@ -3723,7 +3843,7 @@ l-header
   }
 
   .l-container {
-    padding-top: 150px;
+    padding-top: 100px;
   }
 
   .l-container:last-child {
@@ -3913,10 +4033,6 @@ l-header
     margin-right: 10px;
   }
 
-  .tagline {
-    font-size: 18px;
-  }
-
   .l-header {
     width: 100%;
     height: 80px;
@@ -4059,8 +4175,7 @@ l-header
   }
 
   #blog .blog-box .blog-category {
-    right: 10px;
-    bottom: 86px;
+    bottom: 88px;
   }
 
   .btn-container {
@@ -4069,6 +4184,16 @@ l-header
 
   #appeal {
     background-position: right 50% bottom 0%;
+  }
+
+  #shopinfo .shopinfo-box_txt .shop-left {
+    width: 40%;
+    padding-top: 50px;
+    padding-left: 60px;
+  }
+
+  #shopinfo .shopinfo-box_txt .shop-right {
+    width: 60%;
   }
 
   .portfolio_lineup {
