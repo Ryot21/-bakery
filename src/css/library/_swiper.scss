@@ -12,15 +12,15 @@
       
       @include min-screen($break_point_min) {
         content: "";
-        background-image: url(/images/yane.png);
+        background-image: url(../images/yane.png);
         background-position: center top;
         background-repeat: no-repeat;
         background-size: 100% auto;
-        width: 110%;
+        width: 100%;
         height: 100%;
         position: absolute;
         top: -1px;
-        right: -20px;
+        right: 0px;
         z-index: 1;
       }
   }

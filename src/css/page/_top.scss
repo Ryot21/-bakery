@@ -269,7 +269,7 @@
         background: linear-gradient(to bottom,
         rgba(255, 255, 255, 1) 0%,
         rgba(255, 255, 255, 0) 100%),
-        url("/images/AdobeStock_286974362.jpeg")center bottom no-repeat;
+        url("../images/AdobeStock_286974362.jpeg")center bottom no-repeat;
         
         background-size: cover;
         padding: 200px 0 280px;
@@ -315,7 +315,7 @@
 
     // appealエリア
     #appeal {
-        background: url(/images/AdobeStock_251969990_Preview.jpeg) center no-repeat;
+        background: url(../images/AdobeStock_251969990_Preview.jpeg) center no-repeat;
         background-position: right 70% bottom 0%;
         background-size: cover;
         padding: 90px 0 80px;
